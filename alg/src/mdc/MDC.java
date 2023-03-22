@@ -8,8 +8,8 @@ public class MDC {
             resto = a % b;
             a = b;
             b = resto;
-            
-            System.out.println("MDC = " + a);
         }
+
+        System.out.println("MDC = " + a);
     }
 }
