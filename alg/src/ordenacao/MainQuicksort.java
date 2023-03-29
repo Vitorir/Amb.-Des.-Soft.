@@ -10,7 +10,7 @@ public class MainQuicksort {
         
         Quicksort q = new Quicksort();
 
-        for(int i = 0; i < vetor.length; i++){
+        for(int i = 0; i < vetor.length; i++) {
             vetor[i] = sc.nextInt();
         }
 
