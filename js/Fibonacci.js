@@ -1,15 +1,12 @@
-var n = Math.trunc(Math.random() * 10);
+function fibonacci(n) {
+	const sequence = [0, 1];
 
-var valor1 = 0;
-var valor2 = 1;
-var valor3;
+	for (let i = 2; i <= n; i++) {
+		const nextNumber = sequence[i - 1] + sequence[i - 2];
+		sequence.push(nextNumber);
+	}
 
-console.log(valor1);
-console.log(valor2);
-
-for (i = 3; i <= n; i++) {
-    valor3 = valor1 + valor2;
-	console.log(valor3);
-	valor1 = valor2;
-	valor2 = valor3;
+	return sequence.slice(0, n);
 }
+
+module.exports = fibonacci;

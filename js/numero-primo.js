@@ -1,18 +1,20 @@
-var N = Math.trunc(Math.random() * 10);
-var X;
-var contador;
+function primo(X) {
+    var contador = 0;
 
-for (var i = 0; i < N; i++) {
-    contador = 0;
-    X = Math.trunc(Math.random() * 10);
-    for (var j = 2; j < X; j++) {
-        if (X % j == 0) {
-            contador = contador + 1;
+    for (var i = 2; i < X; i++) {
+        if (X % i === 0) {
+            contador++;
+            break;
         }
     }
-    if (contador == 0) {
-        console.log(X + " eh primo");
+
+    if (contador === 0) {
+        console.log(X + " é primo");
+        return "primo";
     } else {
-        console.log(X + " nao eh primo");
+        console.log(X + " não é primo");
+        return "nao-primo";
     }
 }
+
+module.exports = primo;

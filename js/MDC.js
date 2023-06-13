@@ -1,15 +1,20 @@
-var a = Math.trunc(Math.random() * 10);
-var b = Math.trunc(Math.random() * 10);
+function mdc(a, b) {
+    // var a = Math.trunc(Math.random() * 10);
+    // var b = Math.trunc(Math.random() * 10);
 
-console.log("O valor de a é:", a);
-console.log("O valor de b é:", b);
+    // console.log("O valor de a é:", a);
+    // console.log("O valor de b é:", b);
 
-var resto;
+    var resto;
 
-while (b != 0) {
-    resto = a % b
-    a = b
-    b = resto
+    while (b != 0) {
+        resto = a % b
+        a = b
+        b = resto
+    }
+
+    return a;
+    console.log("O MDC é: " + a)
 }
 
-console.log("O MDC é: " + a)
+module.exports = mdc;

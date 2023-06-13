@@ -17,4 +17,7 @@ function quicksort(array) {
 }
 var array = [10, 5, 2, 3, 7, 6, 8, 9, 1, 4];
 var sortedArray = quicksort(array);
+console.log(array)
 console.log(sortedArray);
+
+module.exports = quicksort;
